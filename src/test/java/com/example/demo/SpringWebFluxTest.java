@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.entity.Joke;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,15 @@ public class SpringWebFluxTest {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(String.class).isEqualTo("Hello World");
+    }
+
+    @Test
+    public void testgetJoke()
+    {
+        webTestClient.get().uri("https://official-joke-api.appspot.com/random_joke").accept(MediaType.TEXT_PLAIN)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody((Joke.class));
     }
 
 }
