@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.demo;
 
 import com.example.entity.Joke;
 import org.slf4j.Logger;

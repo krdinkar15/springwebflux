@@ -1,7 +1,7 @@
 package com.example.component;
 
 import com.example.entity.Joke;
-import com.example.service.SampleService;
+import com.example.demo.SampleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
